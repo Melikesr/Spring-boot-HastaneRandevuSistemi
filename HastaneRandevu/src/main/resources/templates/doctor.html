@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hekimlerimiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+
+    <style>
+        .btn-outline-light:hover{
+        color:#0000;
+        background-color:#f8f9fa;
+        border-color:#f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<div class="container text-center">
+
+
+    <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-info">
+        <div class="container">
+            <i class="fas fa-home"></i>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Menü
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="/Anasayfa">Anasayfa</a></li>
+                    <li><a href="#">Doktorlarımız</a></li>
+                    <li><a href="/randevu_create">Randevu</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/iletisim">İletişim</a></li>
+                </ul>
+            </div>
+
+
+
+            <div class="navbar-brand">
+                <img th:src="@{/image/logo.png}" width="100px" height="100px" class="bg-transparent" alt=""/>
+            </div>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="/" class="nav-link">Anasayfa</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="/doctors" class="nav-link">Doktorlarımız</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a href="/randevu_create" class="nav-link">Randevu</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="/iletisim" class="nav-link">İletişim</a>
+                    </li>
+
+                    <li class="nav-item active ">
+                        <a href="/login" class="nav-link">Giriş Yap</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a href="/register" class="nav-link">Kayıt ol</a>
+                    </li>
+                </ul>
+
+
+
+                <form class="form-inline">
+                    <input type="search" class="form-control" placeholder="Arama yap" id="fieldKeyword"/>
+                    <button class="btn btn-outline-light btn-lg m-2" id="buttonSearch">Arama yap</button>
+                </form>
+
+
+            </div>
+
+        </div>
+    </nav>
+
+<div>
+    <img th:src="@{/image/ArkaPlan.jpg}" class="w-100"  height="350px" alt=""/>
+
+</div>
+
+    <div class="bg-info p-5 ">ACİL</div>
+    <div class="bg-dark p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img th:src="@{/image/ahmet.jpg}" class="img-fluid img-thumbnail w-45 "  alt=""/>
+                </div>
+                <div class="col-md-6 text-white" >
+                    <h3>Dr.Ahmet Sandık</h3>
+                    <hr class="border-light">
+                    <p class="lead">
+                        Dr.Ahmet Sandık
+                        Acil Servis Uzmanı
+                     İletişim Bilgisi: ahmet@gmail.com
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-info p-5">GÖZ HASTALIKLARI</div>
+
+    <div class="bg-dark p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 ">
+                    <img th:src="@{/image/elif.jpg}" class="img-fluid img-thumbnail " width="350px" height="350px" alt=""/>
+                </div>
+                <div class="col-md-6  text-white" >
+                    <h3>Dr.Elif Güz</h3>
+                    <hr class="border-light">
+                    <p class="lead">
+                        Dr.Elif Güz
+                        Göz hastalıkları Uzamanı
+                        İletişim Bilgisi: elif@gmail.com
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-info p-5">DERMOTOLOJİ</div>
+
+    <div class="bg-dark p-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img th:src="@{/image/ayse.jpg}" class="img-fluid img-thumbnail " width="350px" height="350px" alt=""/>
+            </div>
+            <div class="col-md-6 text-white" >
+                <h3>Dr.Ayşe Gün</h3>
+                <hr class="border-light">
+                <p class="lead">
+                Dr.Ayşe Gün
+                    Dermotoloji uzmanı
+                    İletişim Bilgisi: aysegun@gmail.com
+                 </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="bg-info p-5">İÇ HASTALIKLARI</div>
+
+    <div class="jumbotron bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img th:src="@{/image/asli.jpg}" class="img-fluid img-thumbnail " width="350px" height="350px" alt=""/>
+                    <div class="col-md-6 text-white" >
+                    <h3>Dr.Aslı Şan</h3>
+                        <hr class="border-light">
+                    <p class="lead">
+                           Dr.Aslı Şan
+                           İç hastalıkları uzmanı
+                           İletişim bilgisi: asli@gmail.com
+                    </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 text-center">
+                    <img th:src="@{/image/veli.jpg}" class="img-fluid img-thumbnail " width="350px" height="350px" alt=""/>
+                    <div class="col-md-6 text-white" >
+                    <h3>Dr.Veli Şanlı</h3>
+                        <hr class="border-light">
+                    <p class="lead">
+                        Dr.Veli Şanlı
+                        İç Hastalıkları uzamanı
+                       İletişim Bilgileri: veli@gmail.com
+                    </p>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-info p-5">KADIN DOĞUM</div>
+
+    <div class="bg-dark p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img th:src="@{/image/neslisah.jpg}" class="img-fluid img-thumbnail" width="350px" height="350px"  alt=""/>
+                </div>
+                <div class="col-md-6 text-white" >
+                    <h3>Dr.Neslişah Koç</h3>
+                    <hr class="border-light">
+                    <p class="lead">
+                        Dr.Neslişah Koç
+                        Kadın Doğum Uzmanı
+                        İletişim Bilgisi: neslisah@gmail.com
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-info p-5">KARDİYOLOJİ</div>
+
+    <div class="jumbotron bg-dark p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img th:src="@{/image/gizem.jpg}" class="img-fluid img-thumbnail " width="350px" height="350px" alt=""/>
+                    <div class="col-md-6 text-white" >
+                    <h3>Dr.Gizem Aktaş</h3>
+                        <hr class="border-light">
+                    <p class="lead" >
+                        Dr.Gizem Aktaş
+                        Kardiyoloji uzmanı
+                        İletişim Bilgisi: gizem@gmail.com
+                    </p>
+
+                </div>
+                </div>
+
+                <div class="col-md-6 text-center">
+                    <img th:src="@{/image/ali.jpg}" class="img-fluid img-thumbnail" width="350px" height="350px" alt=""/>
+                    <div class="col-md-6 text-white" >
+                    <h3>Dr.Ali Atam</h3>
+                        <hr class="border-light">
+                    <p class="lead">
+                        Dr.Ali Atam
+                        Kalp ve Damar hastalıkları Uzmanı
+                        İletişim Bilgisi: ali@gmail.com
+                    </p>
+
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-info p-5">ORTOPEDİ</div>
+
+    <div class="bg-dark p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img th:src="@{/image/hatice.jpg}" class="img-fluid img-thumbnail " width="350px" height="350px"  alt=""/>
+                </div>
+                <div class="col-md-6 text-white" >
+                    <h3>Dr.Hatice Yılmaz</h3>
+                    <hr class="border-light">
+                    <p class="lead">
+                        Dr.Hatice Yılmaz
+                        Ortopedi Uzmanı
+                        İletişim Bilgisi: hatice@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-info p-5">PSİKOLOJİ</div>
+
+    <div class="bg-dark p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img th:src="@{/image/zehra.jpg}" class="img-fluid img-thumbnail " width="350px" height="350px" alt=""/>
+                </div>
+                <div class="col-md-6 text-white" >
+                    <h3>Dr.Zehra Nur</h3>
+                    <hr class="border-light">
+                    <p class="lead">
+                        Dr.Zehra Nur
+                        Psikoloji Uzmanı
+                        İletişim Bilgisi: zehra@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-info p-5">ONKOLOJİ</div>
+
+    <div class="bg-dark p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img th:src="@{/image/omer.jpg}" class="img-fluid img-thumbnail " width="350px" height="350px" alt=""/>
+                </div>
+                <div class="col-md-6 text-white" >
+                    <h3>Dr.Ömer Çakıl</h3>
+                    <hr class="border-light">
+                    <p class="lead">
+                        Dr.Ömer Çakıl
+                        Onkoloji Uzmanı
+                        İletişim Bilgisi: omer@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="bg-into p-5">
+<div class="text-center m-3">
+    <h5 > Copyright &copy; MyCompany Ltd.</h5>
+</div>
+</footer>
+
+
+
+</body>
+
+<script type="text/javascript">
+$(document).ready(new function(){
+$("#buttonSearch").on("click",function(e){
+keyword=$("#fieldKeyword").val();
+alert("Keyword: "+keyword);
+});
+});
+</script>
+
+</html>
